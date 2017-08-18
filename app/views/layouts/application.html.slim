@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+    meta content='IE=edge' http-equiv='X-UA-Compatible'
+    meta content='width=device-width, initial-scale=1' name='viewport'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  body
+    header
+      .navbar.navbar-inverse.navbar-static-top
+        = link_to t('.sms'), '#', class: 'navbar-brand'
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              = link_to t('.home'), page_path('home')
+            li
+              = link_to t('.academics'), page_path('academics')
+            li
+              = link_to t('.about_us'), page_path('about')
+            li
+              = link_to t('.contact'), page_path('contact')
+              li
+                = link_to t('.blog'), page_path('blog')
+    .section
+      = yield
