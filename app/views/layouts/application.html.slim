@@ -8,19 +8,24 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
   body
     header
-      .navbar.navbar-inverse.navbar-static-top
-        = link_to t('.sms'), '#', class: 'navbar-brand'
-        .collapse.navbar-collapse
-          ul.nav.navbar-nav.navbar-right
-            li
+      .row.custom-head
+        = image_tag('school_logo.png', size: "200x80",  class: "center")
+      .navbar.navbar-inverse
+        .container-fluid
+          = link_to t('.sms'), '#', class: 'navbar-brand'
+          ul.nav.navbar-nav
+            li.list
               = link_to t('.home'), page_path('home')
-            li
+            li.list
               = link_to t('.academics'), page_path('academics')
-            li
+            li.list
               = link_to t('.about_us'), page_path('about')
-            li
+            li.list
               = link_to t('.contact'), page_path('contact')
-              li
-                = link_to t('.blog'), page_path('blog')
-    .section
-      = yield
+            li.list
+              = link_to t('.blog'), page_path('blog')
+    = yield
+    - if params[:id] == 'home'
+      = render 'layouts/home_footer'
+    - else
+      = render 'layouts/footer'
