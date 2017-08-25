@@ -1,52 +1,84 @@
+#myCarousel.carousel.slide data-ride="carousel" 
+  /! Indicators
+  ol.carousel-indicators
+    li.active data-slide-to="0" data-target="#myCarousel" 
+    li data-slide-to="1" data-target="#myCarousel"
+    li data-slide-to="2" data-target="#myCarousel"
+  /! Wrapper for slides
+  .carousel-inner
+    .item.active
+      img.tales alt=("Los Angeles") src="logo.jpg" /
+    .item
+      img.tales.img-fluid alt="Chicago" src="logo.jpg" /
+    .item
+      img.tales alt=("New york") src="logo.jpg" /
+  /! Left and right controls
+  a.left.carousel-control data-slide="prev" href="#myCarousel" 
+    span.glyphicon.glyphicon-chevron-left
+    span.sr-only Previous
+  a.right.carousel-control data-slide="next" href="#myCarousel" 
+    span.glyphicon.glyphicon-chevron-right
+    span.sr-only Next
 .container
-  #myCarousel.carousel.slide data-ride="carousel" 
-    /! Indicators
-    ol.carousel-indicators
-      li.active data-slide-to="0" data-target="#myCarousel" 
-      li data-slide-to="1" data-target="#myCarousel" 
-      li data-slide-to="2" data-target="#myCarousel" 
-    /! Wrapper for slides
-    .carousel-inner
-      .item.active
-        img.tales alt=("Los Angeles") src="logo.jpg" /
-      .item
-        img.tales.img-fluid alt="Chicago" src="logo.jpg" /
-      .item
-        img.tales alt=("New york") src="logo.jpg" /
-    /! Left and right controls
-    a.left.carousel-control data-slide="prev" href="#myCarousel" 
-      span.glyphicon.glyphicon-chevron-left
-      span.sr-only Previous
-    a.right.carousel-control data-slide="next" href="#myCarousel" 
-      span.glyphicon.glyphicon-chevron-right
-      span.sr-only Next
-  .container
-    .col-sm-3
-      .table-responsive
-        table.table
-          tr
-            td
-              = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
-      .table-responsive
-        table.table
-          tr
-            td
-              = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
-    .col-sm-9
-      .table-responsive
-        table.table
-          tr
-            td
-              = image_tag("header1.jpg", height: '100', width: '700')
-          tr
-            td
-              = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
-          tr
-            td
-              = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
-          tr
-            td
-              = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+  .col-sm-3
+    .table-responsive
+      table.table
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+    .table-responsive
+      table.table
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+    .table-responsive
+      table.table
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+    .table-responsive
+      table.table
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+    .table-responsive
+      table.table
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+  .col-sm-9
+    .table-responsive
+      table.table
+        tr
+          td
+            = image_tag("header1.jpg", height: '100', width: '700', class: 'no-margin')
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
+        tr
+          td
+            = t('.Join us on Saturday, August 19th anytime from 9:00 a.m. to 2:00 p.m. to find your homeroom. In addition, staff will be available to provide information on bus routes, Free/Reduced Lunch Applications, Parent Portal information and more.')
 
 
 
