@@ -9,7 +9,14 @@ html
   body
     header
       .row.custom-head
-        = image_tag('school_logo.png', size: "200x80",  class: "center")
+        .col-sm-4
+          h1.h1-class
+            = t('.dummy_academy')
+        .col-sm-2
+          = image_tag('school_logo.png', size: "200x80",  class: "center")
+        .col-sm-6
+          h1.h1-class
+            = t('.and_technology')
       .navbar.navbar-inverse
         .container-fluid
           = link_to t('.sms'), '#', class: 'navbar-brand'
