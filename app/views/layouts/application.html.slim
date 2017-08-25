@@ -8,29 +8,35 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
   body
     header
-      .row.custom-head
+      .container-fluid.custom-head
         .col-sm-4
           h1.h1-class
             = t('.dummy_academy')
-        .col-sm-2
+        .col-sm-3
           = image_tag('school_logo.png', size: "200x80",  class: "center")
-        .col-sm-6
+        .col-sm-5
           h1.h1-class
             = t('.and_technology')
-      .navbar.navbar-inverse
+      .nav.navbar.navbar-inverse
         .container-fluid
-          = link_to t('.sms'), '#', class: 'navbar-brand'
-          ul.nav.navbar-nav
-            li.list
-              = link_to t('.home'), page_path('home')
-            li.list
-              = link_to t('.academics'), page_path('academics')
-            li.list
-              = link_to t('.about_us'), page_path('about')
-            li.list
-              = link_to t('.contact'), page_path('contact')
-            li.list
-              = link_to t('.blog'), page_path('blog')
+          .navbar-header
+            button.navbar-toggle data-toggle="collapse" data-target="#myNavbar" type = 'button'
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            = link_to t('.sms'), '#', class: 'navbar-brand'
+          #myNavbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.list
+                = link_to t('.home'), page_path('home')
+              li.list
+                = link_to t('.academics'), page_path('academics')
+              li.list
+                = link_to t('.about_us'), page_path('about')
+              li.list
+                = link_to t('.contact'), page_path('contact')
+              li.list
+                = link_to t('.blog'), page_path('blog')
     = yield
     - if params[:id] == 'home'
       = render 'layouts/home_footer'
