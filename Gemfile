@@ -22,7 +22,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'high_voltage', '~> 3.0.0'
 gem 'slim-rails', '3.0.1'
-
+gem 'contact_us', '~> 1.0.1'
+gem "figaro"
+gem 'bootstrap_form', '2.3.0'
 #css
 gem 'bootstrap-sass', '3.3.7'
 gem 'sass-rails', '~> 5.0'

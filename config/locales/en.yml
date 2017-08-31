@@ -24,10 +24,10 @@ en:
   layouts:
     application:
       home: 'Home'
-      academics: 'Academics'
+      gallary: 'Gallary'
       about_us: 'About Us'
       contact: 'Contact'
-      blogs: 'Blogs'
+      news_feed: 'News Feed'
       dummy_academy: 'Dummy Academy'
       and_technology: 'And Technology'
       sms: 'SMS'

@@ -8,9 +8,15 @@ $elan-blue: #000000;
   max-height: 500px !important;
 }
 div{
-    margin: 0 !important;
-    padding: 0 !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
+
+.cont-height{
+  max-height: 1000px !important;
+}
+
 footer {
   bottom: 0;
   width: 100%;
@@ -23,6 +29,12 @@ footer {
 .space-20 {
   padding: 20px 0;
 }
+
+.text-format
+  {
+    padding-top: 50px;
+    padding-left: 40px;
+  }
 
 .no-padding {
   padding: 0;
@@ -43,10 +55,17 @@ footer {
   width: 117px;
   height: 26px;
 }
+
+p {
+  font-family: "Verdana", sans-serif;
+  font-size: 14px;
+}
 .custom-head {
 	background-color: $regent-gray;
 }
-
+.page-descrip{
+  padding-left: 40px;
+}
 .center {
   display: block;
   margin: auto;

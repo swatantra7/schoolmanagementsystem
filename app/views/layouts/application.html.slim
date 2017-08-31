@@ -30,15 +30,10 @@ html
               li.list
                 = link_to t('.home'), page_path('home')
               li.list
-                = link_to t('.academics'), page_path('academics')
+                = link_to t('.gallary'), page_path('gallery')
               li.list
                 = link_to t('.about_us'), page_path('about')
               li.list
-                = link_to t('.contact'), page_path('contact')
-              li.list
-                = link_to t('.blog'), page_path('blog')
+                = link_to t('.contact'), new_contact_path('contact')
     = yield
-    - if params[:id] == 'home'
-      = render 'layouts/home_footer'
-    - else
-      = render 'layouts/footer'
+    = render 'layouts/home_footer'
