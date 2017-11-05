@@ -8,16 +8,9 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
   body
     header
-      .container-fluid.custom-head
-        .col-sm-4
-          h1.h1-class
-            = t('.dummy_academy')
-        .col-sm-3
-          = image_tag('school_logo.png', size: "200x80",  class: "center")
-        .col-sm-5
-          h1.h1-class
-            = t('.and_technology')
-      .nav.navbar.navbar-inverse
+      .container-fluid
+        br
+      .nav.navbar.navigation
         .container-fluid
           .navbar-header
             button.navbar-toggle data-toggle="collapse" data-target="#myNavbar" type = 'button'
@@ -28,12 +21,18 @@ html
           #myNavbar.collapse.navbar-collapse
             ul.nav.navbar-nav
               li.list
-                = link_to t('.home'), page_path('home')
+                = link_to t('.home'), page_path('home'), id: 'a-custom'
               li.list
-                = link_to t('.gallary'), page_path('gallery')
+                = link_to t('.about_us'), page_path('about'), id: 'a-custom'
               li.list
-                = link_to t('.about_us'), page_path('about')
+                = link_to t('.admissions'), '#', id: 'a-custom'
               li.list
-                = link_to t('.contact'), new_contact_path('contact')
+                = link_to t('.examination'), '#', id: 'a-custom'
+              li.list
+                = link_to t('.facilities'), '#', id: 'a-custom'
+              li.list
+                = link_to t('.gallary'), page_path('gallery'), id: 'a-custom'
+              li.list
+                = link_to t('.contact'), new_contact_path('contact'), id: 'a-custom'
     = yield
     = render 'layouts/home_footer'

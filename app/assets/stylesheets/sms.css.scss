@@ -84,3 +84,21 @@ p {
 .no-margin{
   margin: 0px;
 }
+
+.navigation {
+  background: #034172 none repeat scroll 0 0;
+  border-top: 2px solid #ffc315;
+  min-height: 50px;
+  width: 100%;
+}
+#a-custom {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+#myNavbar ul.nav a#a-custom:hover {
+  color: #CCCC00;
+  display: inline-block;
+  background:transparent !important;
+}
+
