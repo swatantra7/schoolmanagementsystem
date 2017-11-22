@@ -1,0 +1,23 @@
+humanities:
+  - English
+  - Hindi
+  - SansKrit
+  - Urdu
+  - philosphy
+  - economics
+social_sciences:
+  - Geography
+  - history
+  - sociology
+  - psychology
+  - political_science
+  - home_science
+science:
+  - botany
+  - zoology
+  - physics
+  - chemistry
+  - mathematics
+  - statistics
+accounts:
+  - commerce
