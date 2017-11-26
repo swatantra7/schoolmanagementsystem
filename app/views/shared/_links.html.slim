@@ -1,0 +1,21 @@
+.space-20
+  .btwidget
+    ul.btmenu
+      li
+        = link_to t('.introduction'), page_path('about/intro')
+    ul.btmenu
+      li
+        = link_to t('.home'), page_path('home')
+    ul.btmenu
+      li
+        = link_to t('.principal_message'), page_path('about/principal_message')
+    ul.btmenu
+      li
+        = link_to t('.course_offered'), courses_path
+    ul.btmenu
+      li
+        = link_to t('.gallary'), page_path('gallery')
+    ul.btmenu
+      li
+        = link_to t('.contact'), new_contact_path('contact')
+

@@ -81,6 +81,16 @@ p {
   margin-bottom: 1px;
 }
 
+.btwidget {
+  background-color: #1051a2;
+  padding-left: 15px !important;
+  padding-right: 10px !important;
+}
+
+.pad-lef{
+  padding-left: 15px !important;
+}
+
 .no-margin{
   margin: 0px;
 }
@@ -155,5 +165,26 @@ p {
 .prin-img-size{
   height: 250px;
   width: 250px;
+}
+
+.body-content{
+  width: 100% !important;
+  background: url('bg_img.jpeg');
+  margin-top: 10 !important;
+}
+
+.pad-20 {
+  padding: 20px !important; 
+}
+
+.btwidget ul.btmenu li {
+  border-bottom: 1px dotted #ccc !important;
+  padding: 10px !important;
+}
+
+.btwidget ul.btmenu li > a {
+  color: #fff;
+  display: inline-block !important;
+  font-size: 14px !important;
 }
 

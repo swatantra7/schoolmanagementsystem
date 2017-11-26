@@ -2,11 +2,13 @@
   .col-sm-4
     .row
       h3.bold
-        = t('.about_st_domnik_inter_colege')
-  .col-sm-5
+        = t('.about_st_domnik_inter_college')
+    .row
+      = render 'shared/links'
+  .col-sm-5.pad-lef
     .row
       h3
-        = t('.introduction_to_st_domnik_inter_colege')
+        = t('.introduction_to_st_domnik_inter_college')
       br
       p 
         |
@@ -43,3 +45,5 @@
     .row.pull-right
       h3.bold
         = t('.Notice')
+      .row
+        = render 'shared/links'

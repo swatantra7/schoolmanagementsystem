@@ -3,13 +3,17 @@
     .row
       h4.text-center = t('.message_from_Principal')
       .row
-        p
-          |
-            Dear
-        br
-        p
-          |
-            Parent and the student
+        .col-sm-5
+          p
+            |
+              Dear
+          br
+          p
+            |
+              Parent and the student
+        .col-sm-7
+          .panel-body.pull-right
+            = image_tag('principal.jpg', size: "300x100")
         br
         p
           |
