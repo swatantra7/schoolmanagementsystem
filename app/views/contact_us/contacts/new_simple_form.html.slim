@@ -1,22 +1,43 @@
 h2
   = t('.contact_us')
-= bootstrap_form_for @contact, validates: true, layout: :horizontal,
-    label_col: 'col-md-3', control_col: 'col-md-7', url: contacts_path do |f|
-  .form-group.space-20
-    = f.text_field :name if ContactUs.require_name
-  .row.space-20
-    = f.text_field :email
-  .row.space-20
-    = f.text_field :subject if ContactUs.require_subject
-  .row.space-20
-    = f.text_area :message
-  .form-group
-    .col-md-6.pull-right
-      = f.button :submit, value: t('.submit'),
-        alt: t('.submit'), id: 'contact_us_contact_submit', title: t('.submit'), class: 'btn btn-success'
-  br
-  br
-  br
-  br
-  br
-
+.row
+  .col-sm-7
+    = bootstrap_form_for @contact, validates: true, layout: :horizontal,
+        label_col: 'col-md-3', control_col: 'col-md-7', url: contacts_path do |f|
+      .form-group.space-20
+        = f.text_field :name if ContactUs.require_name
+      .row.space-20
+        = f.text_field :email
+      .row.space-20
+        = f.text_field :subject if ContactUs.require_subject
+      .row.space-20
+        = f.text_area :message
+      .form-group
+        .col-md-6.pull-right
+          = f.button :submit, value: t('.submit'),
+            alt: t('.submit'), id: 'contact_us_contact_submit', title: t('.submit'), class: 'btn btn-success'
+        br
+        br
+        br
+        br
+        br
+  .col-sm-5
+    h3
+      |
+        TO CONTACT REGARDING ADMISSION
+    br
+    h3
+      |
+        St Domnik Inter College
+    br
+    p
+      |
+        Mobile Number : 9955365023, 8002480434
+    br
+    p
+      |
+        Email : stdomnikintercollege@gmail.com
+    br
+    p
+      |       
+        Web : https://sms-application1.herokuapp.com
