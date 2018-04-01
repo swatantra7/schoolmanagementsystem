@@ -1,0 +1,17 @@
+.container
+  .space-20
+    = form_for [:admin, @student], html: {class: 'form-horizontal'} do |f|
+      .form-group
+        = f.label :name, class: 'control-label col-sm-2'
+        .col-md-2
+          = f.text_field :name, class: 'form-control'
+      .space-20
+      .form-group
+        = f.label :age, class: 'control-label col-sm-2'
+        .col-md-2
+          = f.text_field :age, class: 'form-control'
+      .space-20
+      .form-group
+        = f.submit 'save', data: { confirm: 'Are You Sure want to Save'}, class: 'btn btn-success'
+        |&nbsp;
+        = link_to 'Back', admin_students_path, class: 'btn btn-danger' 

@@ -8,8 +8,19 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
   body
     header
-      .container-fluid
-        br
+      .container-fluid.custom-head
+        .col-md-2
+          label
+            strong
+              = t('.logo')
+        .col-md-5
+          = link_to t('.image'), '#'
+        - if false
+          .col-md-5.pull-right
+            = link_to t('.log_out'), '#'
+        - else    
+          .col-md-5
+            = link_to 'Login', new_user_session_path
       .nav.navbar.navigation
         .container-fluid
           .navbar-header

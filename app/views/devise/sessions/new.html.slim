@@ -1,0 +1,27 @@
+.modal-header
+  .modal-title
+    h2 Log In
+.modal-body
+  .row
+    .col-md-12
+      = form_for resource, as: resource_name, url: session_path(resource_name), 
+          html: {class: 'form-horizontal' } do |f|
+        .form-group
+          = f.label :email, class: 'col-md-2 control-label'
+          .col-md-3
+            = f.email_field :email, autofocus: true, class: 'form-control'
+        .space-20
+        .form-group
+          = f.label :password, class: 'col-md-2 control-label'
+          .col-md-3
+            = f.password_field :password, class: 'form-control'
+        .space-20
+        .form-group
+          .col-md-3.col-md-offset-2
+            .pull-right
+              = f.submit 'Login', class: 'btn btn-success'
+        .space-20
+        .row
+          .col-md-3.col-md-offset-2
+            = render partial: 'devise/shared/links'
+        .space-20

@@ -1,0 +1,26 @@
+.row
+  .container
+    .space-20
+      .row.pull-right
+        = link_to t('.add_new_student'),new_admin_student_path,class: 'btn btn-success'
+      .space-20
+      .col-md-12
+        .table-wrapper
+          .table-responsive
+            table.table.table-bordered.table-striped#bootstrap-table
+              thead
+                tr
+                  th data-sortable='true' = t('.reference_id')
+                  th data-sortable='true' = t('.name')
+                  th data-sortable='true' = t('.age')
+                  th = t('.action')
+              tbody
+                - @students.each do |student|
+                  tr
+                    td = student.id
+                    td = student.name
+                    td = student.age
+                    td
+                      = link_to t('.edit'), edit_admin_student_path(student), class: 'btn btn-success'
+                      |&nbsp; 
+                      = link_to t('.destory'), admin_student_path(:admin, student), class: 'btn btn-danger'
