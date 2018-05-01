@@ -21,6 +21,16 @@ html
         - else    
           .col-md-5
             = link_to 'Login', new_user_session_path
+      .header-main
+        .container-fluid
+          .col-md-5
+            = image_tag('st_domnik.png', size: "400x100")
+          .col-md-4
+          .col-md-3
+            .col-md-4
+              = link_to '#', :class => 'btn-color btn-lg' do
+                span 
+                  = t('.Login')
       .nav.navbar.navigation
         .container-fluid
           .navbar-header
