@@ -6,31 +6,25 @@ html
     meta content='width=device-width, initial-scale=1' name='viewport'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
   body
     header
       .container-fluid.custom-head
         .col-md-2
-          label
-            strong
-              = t('.logo')
-        .col-md-5
-          = link_to t('.image'), '#'
-        - if false
-          .col-md-5.pull-right
-            = link_to t('.log_out'), '#'
-        - else    
-          .col-md-5
-            = link_to 'Login', new_user_session_path
       .header-main
         .container-fluid
           .col-md-5
             = image_tag('st_domnik.png', size: "400x100")
           .col-md-4
           .col-md-3
-            .col-md-4
-              = link_to '#', :class => 'btn-color btn-lg' do
-                span 
-                  = t('.Login')
+            - if user_signed_in?
+              = link_to destroy_user_session_path, method: :delete, class: 'btn btn-danger custom-button' do
+                span
+                  = 'LogOut'
+            - else
+              = link_to new_user_session_path, class: 'btn btn-color custom-button' do
+                span
+                  = 'Admin Login'
       .nav.navbar.navigation
         .container-fluid
           .navbar-header
