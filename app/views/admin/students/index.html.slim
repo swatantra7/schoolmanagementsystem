@@ -3,6 +3,8 @@
     .space-20
       .row.pull-right
         = link_to t('.add_new_student'),new_admin_student_path,class: 'btn btn-success'
+        |&nbsp;
+        = link_to t('.import_students'),'#', class: 'btn btn-success'
       .space-20
       .col-md-12
         .table-wrapper
@@ -13,6 +15,16 @@
                   th data-sortable='true' = t('.reference_id')
                   th data-sortable='true' = t('.name')
                   th data-sortable='true' = t('.age')
+                  th data-sortable='true' = t('.villege')
+                  th data-sortable='true' = t('.state')
+                  th data-sortable='true' = t('.post_office')
+                  th data-sortable='true' = t('.district')
+                  th data-sortable='true' = t('.pin_code')
+                  th data-sortable='true' = t('.mobile')
+                  th data-sortable='true' = t('.email_id')
+                  th data-sortable='true' = t('.date_of_birth')
+                  th data-sortable='true' = t('.session')
+                  th data-sortable='true' = t('.aadhar_number')
                   th = t('.action')
               tbody
                 - @students.each do |student|
@@ -20,7 +32,17 @@
                     td = student.id
                     td = student.name
                     td = student.age
+                    td = student.villege
+                    td = student.state
+                    td = student.po
+                    td = student.dist
+                    td = student.pincode
+                    td = student.mobile
+                    td = student.email_id
+                    td = student.dob
+                    td = student.session
+                    td = student.aadhar_number
                     td
-                      = link_to t('.edit'), edit_admin_student_path(student), class: 'btn btn-success'
+                      = link_to t('.edit'), edit_admin_student_path(student), class: 'btn btn-sm btn-success'
                       |&nbsp; 
-                      = link_to t('.destory'), admin_student_path(:admin, student), class: 'btn btn-danger'
+                      = link_to t('.destory'), admin_student_path(student), method: :delete, class: 'btn btn-sm btn-danger'

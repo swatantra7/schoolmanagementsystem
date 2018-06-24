@@ -1,0 +1,11 @@
+li.list
+  = link_to t('.dashboard'), '#', id: 'a-custom'
+li.list.dropdown
+  = link_to t('.manage'), '#', id: 'a-custom'
+  ul.dropdown-menu
+    li.list
+      = link_to t('.students'), admin_students_path, id: 'a-custom'
+    li.divider                  
+    li.list
+      = link_to t('.teacher'), '#', id: 'a-custom'
+    li.divider

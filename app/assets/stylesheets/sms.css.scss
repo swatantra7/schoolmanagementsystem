@@ -29,6 +29,9 @@ footer {
 .space-20 {
   padding: 20px 0;
 }
+.space-10 {
+  padding: 10px 0;
+}
 
 .text-format
   {
@@ -74,7 +77,7 @@ p {
 .center {
   display: block;
   margin: auto;
-  border: 3px solid green;
+  text-align: center
 }
 
 .h1-class{
@@ -222,4 +225,8 @@ p {
 
 .btn-color{
   background-color: #0a63b1;
+}
+
+.field_with_errors{
+  color: red; 
 }

@@ -4,6 +4,7 @@ class Admin::StudentsController < AdminController
 
   def new
     @student = Student.new
+    @address = @student.build_address 
   end
 
   def index
@@ -43,13 +44,28 @@ class Admin::StudentsController < AdminController
     end
   end
 
+  def import_student
+  end
+
   private
 
   def student_params
     params.require(:student).permit(
-      :name,
-      :class,
-      :age
+      :fname,
+      :mname,
+      :age,
+      address_attributes:[
+      :villege, 
+      :po, 
+      :dist, 
+      :state, 
+      :pincode, 
+      :mobile, 
+      :email_id, 
+      :dob, 
+      :session, 
+      :aadhar_number
+      ]
     )
   end
 
@@ -58,3 +74,6 @@ class Admin::StudentsController < AdminController
   end
 
 end
+
+
+

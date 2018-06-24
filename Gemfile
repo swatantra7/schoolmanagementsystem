@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '5.0.2'
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
 # Use Uglifier as compressor for JavaScript assets
@@ -13,13 +13,12 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'high_voltage', '~> 3.0.0'
-gem 'slim-rails', '3.0.1'
+gem 'slim-rails'
 gem 'contact_us', '~> 1.0.1'
 gem "figaro"
 gem 'bootstrap_form', '2.3.0'
@@ -27,6 +26,8 @@ gem 'bootstrap_form', '2.3.0'
 gem 'bootstrap-sass', '3.3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'slim'
+gem 'awesome_print'
+gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
 
 group :development do
 	gem 'sqlite3'

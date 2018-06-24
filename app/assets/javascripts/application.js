@@ -13,8 +13,7 @@
 //= require jquery-2.0.3.min
 //= require jquery_ujs
 //= require bootstrap.min
-//= require_tree .
-
+//= require rails.validations
 
 $(document).ready(function(){
   $('ul.nav li.dropdown').hover(function() {
