@@ -37,7 +37,7 @@ end
 gem 'devise', '4.1'
 
 group :production do
-	gem 'pg'
+	gem 'sqlite3'
 	gem 'rails_12factor'
 	gem 'rails_serve_static_assets'
 end
