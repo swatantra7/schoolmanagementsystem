@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180612021739) do
+ActiveRecord::Schema.define(version: 20180704184640) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "villege"
@@ -37,14 +36,38 @@ ActiveRecord::Schema.define(version: 20180612021739) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "documents", force: :cascade do |t|
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+  end
+
+  create_table "student_sheets", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
   create_table "students", force: :cascade do |t|
-    t.string   "name"
     t.integer  "age"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "fname"
     t.string   "mname"
     t.string   "blood_group"
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "class"
+    t.integer  "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,9 +84,8 @@ ActiveRecord::Schema.define(version: 20180612021739) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "admin"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

@@ -29,6 +29,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'slim'
 gem 'awesome_print'
 gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
+gem "paperclip", '~> 4.3.7'
+gem "roo"
+gem 'roo-xls'
 
 group :development do
 	gem 'sqlite3'

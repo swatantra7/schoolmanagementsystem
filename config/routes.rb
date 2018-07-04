@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     root 'admin/students#index', as: :authenticated_root
     namespace :admin do 
       resources :students
+      resources :teachers
+      resources :student_sheets
     end
   end
 

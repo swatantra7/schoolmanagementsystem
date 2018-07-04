@@ -3,7 +3,7 @@ class Admin::StudentsController < AdminController
   before_action :find_student, only: [:show, :edit, :destroy, :update]
 
   def new
-    @student = Student.new
+    @resource = @student = Student.new
     @address = @student.build_address 
   end
 
@@ -44,17 +44,16 @@ class Admin::StudentsController < AdminController
     end
   end
 
-  def import_student
-  end
-
   private
 
   def student_params
     params.require(:student).permit(
+      :id,
       :fname,
       :mname,
       :age,
       address_attributes:[
+      :id,
       :villege, 
       :po, 
       :dist, 
@@ -70,7 +69,7 @@ class Admin::StudentsController < AdminController
   end
 
   def find_student
-    @student = Student.find(params[:id])
+    @resource = @student = Student.find(params[:id])
   end
 
 end

@@ -1,9 +1,9 @@
 .container
   .space-20
     h1.center 
-      = t('.add_new_student')
+      = "Add New #{@resource.class}"
     .space-20
-    = form_for [:admin, @student], validate: true, html: {class: 'form-horizontal'} do |f|
+    = form_for [:admin, @resource], validate: true, html: {class: 'form-horizontal'}, multipart: true do |f|
       .form-group
         = f.label :fname, 'First Name', class: 'control-label col-sm-2'
         .col-md-2
