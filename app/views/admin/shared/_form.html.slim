@@ -19,6 +19,16 @@
         .col-md-2
           = f.text_field :age, class: 'form-control'
       .space-10
+      .form-group
+        = f.label :email, 'Email', class: 'control-label col-sm-2'
+        .col-md-2
+          = f.text_field :email, class: 'form-control'
+      - if @resouce.is_a?(Student) && @resouce.new_record?
+        .form-group
+          = f.label :password, 'Password', class: 'control-label col-sm-2'
+          .col-md-2
+            = f.text_field :password, class: 'form-control'
+      .space-10
       = f.fields_for :address do |address|
         .form-group
           = address.label :villege, 'Village', class: 'control-label col-sm-2'
@@ -51,11 +61,6 @@
             = address.text_field :mobile, class: 'form-control'
         .space-10
         .form-group
-          = address.label :email_id, class: 'control-label col-sm-2'
-          .col-md-2
-            = address.text_field :email_id, class: 'form-control'
-        .space-10
-        .form-group
           = address.label :dob, class: 'control-label col-sm-2'
           .col-md-2
             = address.text_field :dob, class: 'form-control'
@@ -69,7 +74,35 @@
           = address.label :aadhar_number, class: 'control-label col-sm-2'
           .col-md-2
             = address.text_field :aadhar_number, class: 'form-control'
-        .space-10
+        .form-group
+          - if @resource.is_a?(Student)
+            .row
+              h4
+                center.pull-left
+                  Add Results
+            .space-20
+            .row
+              .col-md-12
+                #results
+                  = f.fields_for :results  do |result|
+                    = render 'admin/shared/results_fields', f: result
+                  .links
+                    = link_to_add_association "Add Result", f, :results, class: "btn btn-info"
+        .form-group
+          - if @resource.is_a?(Student)
+            .row
+              h4
+                center.pull-left
+                   Add AdminCards
+            .space-20
+            .row
+              .col-md-12
+                #admidcards
+                  = f.fields_for :admidcards do |ac|
+                    = render 'admin/shared/admidcards_fields', f: ac
+                  .links
+                    = link_to_add_association "Add AdmidCard", f, :admidcards, class: "btn btn-info", partial: 'admin/shared/admidcards_fields'
+          .space-10
       .form-group
         = f.submit 'save', data: { confirm: 'Are You Sure want to Save'}, class: 'btn btn-success'
         |&nbsp;

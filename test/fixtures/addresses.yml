@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  villege: MyString
+  state: MyString
+  po: MyString
+  dist: MyString
+  pincode: MyString
+  mobile: MyString
+  email_id: MyString
+  dob: 2018-06-12 07:47:39
+  session: MyString
+  bg: MyString
+  aadhar_number: MyString
+  resource_id: 
+
+two:
+  villege: MyString
+  state: MyString
+  po: MyString
+  dist: MyString
+  pincode: MyString
+  mobile: MyString
+  email_id: MyString
+  dob: 2018-06-12 07:47:39
+  session: MyString
+  bg: MyString
+  aadhar_number: MyString
+  resource_id: 

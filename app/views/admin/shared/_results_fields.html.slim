@@ -1,0 +1,12 @@
+.nested-fields.col-md-6
+  .col-xs-2
+    - if f.object.try(:result).present?
+      = link_to "View", f.object.result.url(:original, false), target: "_blank", class: "btn btn-primary"
+  .col-md-2
+    = f.text_field :klass, label: 'Enter Class'
+  .col-md-2
+    = f.text_field :semester, label: 'Enter Semester'
+  .col-md-6.required
+    = f.file_field :result, label: 'Enter The result'
+  .col-md-2
+    = link_to_remove_association ("Remove"), f, class: "btn btn-danger"

@@ -1,6 +1,18 @@
 class Student < ActiveRecord::Base
 
+  devise :database_authenticatable, 
+         :registerable,
+         :recoverable, 
+         :rememberable, 
+         :validatable
+
   include ValidationShared
+
+  has_many :results
+  has_many :admidcards
+
+  accepts_nested_attributes_for :results
+  accepts_nested_attributes_for :admidcards
 
   class << self
 

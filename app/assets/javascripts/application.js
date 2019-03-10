@@ -12,6 +12,7 @@
 //
 //= require jquery-2.0.3.min
 //= require jquery_ujs
+//= require cocoon
 //= require bootstrap.min
 //= require rails.validations
 

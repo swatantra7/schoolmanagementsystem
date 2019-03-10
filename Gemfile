@@ -32,6 +32,7 @@ gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
 gem "paperclip", '~> 4.3.7'
 gem "roo"
 gem 'roo-xls'
+gem "cocoon"
 
 group :development do
 	gem 'sqlite3'

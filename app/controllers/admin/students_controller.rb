@@ -12,6 +12,7 @@ class Admin::StudentsController < AdminController
   end
 
   def create
+    debugger
     @student = Student.new(student_params)
     if @student.save
       flash[:notice] = t('.student_created_sucessfully')
@@ -26,6 +27,7 @@ class Admin::StudentsController < AdminController
   end
 
   def update
+    debugger
     if @student.update_attributes(student_params)
       redirect_to admin_students_path
       flash[:notice] = t('.student_updated_successfully')
@@ -52,6 +54,9 @@ class Admin::StudentsController < AdminController
       :fname,
       :mname,
       :age,
+      :password,
+      :email,
+      :confirm_password,
       address_attributes:[
       :id,
       :villege, 
@@ -63,7 +68,19 @@ class Admin::StudentsController < AdminController
       :email_id, 
       :dob, 
       :session, 
-      :aadhar_number
+      :aadhar_number,
+      ],
+      results_attributes: [
+        :klass,
+        :semester,
+        :result,
+        :_destroy
+      ],
+      admidcards_attributes: [
+        :klass,
+        :semester,
+        :admidcard,
+        :_destroy
       ]
     )
   end

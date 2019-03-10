@@ -15,16 +15,25 @@ html
         .container-fluid
           .col-md-5
             = image_tag('st_domnik.png', size: "400x100")
-          .col-md-4
-          .col-md-3
-            - if user_signed_in?
-              = link_to destroy_user_session_path, method: :delete, class: 'btn btn-danger custom-button' do
-                span
+          .col-md-2
+          .col-md-5
+            - if user_signed_in? 
+              .pull-right
+                = link_to destroy_user_session_path, method: :delete, class: 'btn btn-danger custom-button' do
+                  span
+                    = 'LogOut'
+            - elsif student_signed_in?
+              .pull-right
+                = link_to destroy_student_session_path, method: :delete, class: 'btn btn-danger custom-button' do
+                  span.
                   = 'LogOut'
             - else
               = link_to new_user_session_path, class: 'btn btn-color custom-button' do
                 span
                   = 'Admin Login'
+              = link_to new_student_session_path, class: 'btn btn-color custom-button' do
+                span
+                  = 'Student Login'
       .nav.navbar.navigation
         .container-fluid
           .navbar-header
@@ -37,6 +46,8 @@ html
             ul.nav.navbar-nav
               - if user_signed_in?
                 = render partial: 'layouts/admin_navigation'
+              -elsif student_signed_in?
+                = render partial: 'layouts/student_navigation'
               - else
                 = render partial: 'layouts/public_navigation'
     = yield

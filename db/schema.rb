@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180704184640) do
+ActiveRecord::Schema.define(version: 20190310201123) do
+
+  create_table "academic_records", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "add_column_student_id_to_admidcards", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "add_column_student_id_to_results", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "addresses", force: :cascade do |t|
     t.string   "villege"
@@ -27,6 +42,18 @@ ActiveRecord::Schema.define(version: 20180704184640) do
     t.string   "resource_type"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "admidcards", force: :cascade do |t|
+    t.string   "semester"
+    t.string   "klass"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "admidcard_file_name"
+    t.string   "admidcard_content_type"
+    t.integer  "admidcard_file_size"
+    t.datetime "admidcard_updated_at"
+    t.integer  "student_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -47,6 +74,18 @@ ActiveRecord::Schema.define(version: 20180704184640) do
     t.string   "resource_type"
   end
 
+  create_table "results", force: :cascade do |t|
+    t.string   "semester"
+    t.string   "klass"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "result_file_name"
+    t.string   "result_content_type"
+    t.integer  "result_file_size"
+    t.datetime "result_updated_at"
+    t.integer  "student_id"
+  end
+
   create_table "student_sheets", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -55,19 +94,28 @@ ActiveRecord::Schema.define(version: 20180704184640) do
 
   create_table "students", force: :cascade do |t|
     t.integer  "age"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "fname"
+    t.string   "mname"
+    t.string   "blood_group"
+    t.string   "email"
+    t.string   "password"
+    t.string   "confirm_password"
+    t.string   "encrypted_password"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "fname"
     t.string   "mname"
     t.string   "blood_group"
-  end
-
-  create_table "teachers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "class"
-    t.integer  "age"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

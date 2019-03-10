@@ -10,10 +10,6 @@ class Address < ActiveRecord::Base
   validates :aadhar_number,
             presence: true
 
-  validates :email_id,
-            presence: true,
-            uniqueness: true
-
   validates :mobile,
             :pincode,
             numericality: true,
