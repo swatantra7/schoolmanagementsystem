@@ -2,7 +2,7 @@ li.list.dropdown
   = link_to t('.notification'), '#', id: 'a-custom'
   ul.dropdown-menu
     li.list
-      = link_to 'Download AdmidCard', '#', id: 'a-custom'
+      = link_to 'Download AdmidCard', admid_cards_students_notifications_path, id: 'a-custom'
     li.divider                  
     li.list
-      = link_to 'Download Result', '#',id: 'a-custom'
+      = link_to 'Download Result', results_students_notifications_path, id: 'a-custom'

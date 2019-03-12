@@ -1,12 +1,17 @@
-.nested-fields.col-md-6
+.nested-fields.col-md-12 style= "border: 1px dashed #999; border-radius: 5px; padding: 20px;"
   .col-xs-2
     - if f.object.try(:result).present?
       = link_to "View", f.object.result.url(:original, false), target: "_blank", class: "btn btn-primary"
   .col-md-2
-    = f.text_field :klass, label: 'Enter Class'
+    .form-group
+      = f.label :klass, 'Class', class: 'control-label'
+      = f.text_field :klass, label: 'Enter Class'
   .col-md-2
-    = f.text_field :semester, label: 'Enter Semester'
+    .form-group
+      = f.label :semester, 'Semester'
+      = f.text_field :semester, label: 'Enter Semester', class: 'control-label'
   .col-md-6.required
+    = f.label :result, 'Result', class: 'control-label'
     = f.file_field :result, label: 'Enter The result'
   .col-md-2
     = link_to_remove_association ("Remove"), f, class: "btn btn-danger"

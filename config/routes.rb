@@ -18,7 +18,15 @@ Rails.application.routes.draw do
   devise_for :students, path: 'students'
   devise_scope :student do
     authenticated :student do
-      root 'students/dashboards#index'
+      root 'students/notifications#admid_cards'
+      namespace :students do
+        resources :notifications do
+          collection do
+            get :admid_cards
+            get :results
+          end
+        end
+      end
     end
   end
 

@@ -1,0 +1,21 @@
+.row
+  .container
+    .space-20
+    .col-md-12
+      .table-wrapper
+        .table-responsive
+          table.table.table-bordered.table-striped#bootstrap-table
+            thead
+              tr
+                th data-sortable='true' Refernce
+                th data-sortable='true' Semester
+                th data-sortable='true' Class
+                th = t('.action')
+            tbody
+              - @admid_cards.each do |admid_card|
+                tr
+                  td = admid_card.id
+                  td = admid_card.semester
+                  td = admid_card.klass
+                  td 
+                    = link_to 'download', admid_card.admidcard.url, class: 'btn btn-sm btn-primary'

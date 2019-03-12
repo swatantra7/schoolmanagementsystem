@@ -1,0 +1,21 @@
+.row
+  .container
+    .space-20
+    .col-md-12
+      .table-wrapper
+        .table-responsive
+          table.table.table-bordered.table-striped#bootstrap-table
+            thead
+              tr
+                th data-sortable='true' Refrence
+                th data-sortable='true' Semester
+                th data-sortable='true' Class
+                th = t('.action')
+            tbody
+              - @results.each do |result|
+                tr
+                  td = result.id
+                  td = result.semester
+                  td = result.klass
+                  td 
+                    = link_to 'download', result.result.url, class: 'btn btn-sm btn-primary'

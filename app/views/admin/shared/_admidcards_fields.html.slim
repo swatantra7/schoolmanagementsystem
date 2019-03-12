@@ -1,12 +1,18 @@
-.nested-fields
+.nested-fields.col-md-12 style= "border: 1px dashed #999; border-radius: 5px; padding: 20px;"
   .col-xs-2
     - if f.object.try(:admincard).present?
       = link_to "View", f.object.admincard.url(:original, false), target: "_blank", class: "btn btn-primary"
   .col-md-2
-    = f.text_field :klass, label: 'Enter Class'
+    .form-group
+      = f.label :klass, 'Class', label: 'control-label' 
+      = f.text_field :klass, class: 'form-control'
   .col-md-2
-    = f.text_field :semester, label: 'Enter Semester'
+    .form-group
+      = f.label :semester, class: 'control-label'
+      = f.text_field :semester, class: 'form-control'
   .col-md-6.required
-    = f.file_field :admidcard, label: 'Enter The Admid Card'
+    = f.label :admid_card, class: 'control-label'
+    = f.file_field :admidcard
+  .space-20
   .col-md-2
     = link_to_remove_association 'Remove', f, class: "btn btn-danger"

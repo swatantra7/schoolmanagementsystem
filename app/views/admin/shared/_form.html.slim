@@ -78,8 +78,8 @@
           - if @resource.is_a?(Student)
             .row
               h4
-                center.pull-left
-                  Add Results
+                center
+                  Results 
             .space-20
             .row
               .col-md-12
@@ -87,7 +87,7 @@
                   = f.fields_for :results  do |result|
                     = render 'admin/shared/results_fields', f: result
                   .links
-                    = link_to_add_association "Add Result", f, :results, class: "btn btn-info"
+                    = link_to_add_association "Add Result", f, :results, class: "btn btn-info", partial: 'admin/shared/results_fields'
         .form-group
           - if @resource.is_a?(Student)
             .row
