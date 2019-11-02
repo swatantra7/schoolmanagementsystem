@@ -38,7 +38,7 @@ group :development do
 	gem 'sqlite3'
 end
 
-gem 'devise', '4.1'
+gem 'devise', '4.7.1'
 
 group :production do
 	gem 'sqlite3'
